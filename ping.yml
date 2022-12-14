@@ -1,0 +1,9 @@
+# ping linux hosts
+
+---
+- name: ping all linux servers
+  hosts: all
+  become: yes
+  tasks:
+    - name: ping the linux servers
+      ansible.builtin.ping:

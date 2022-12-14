@@ -1,0 +1,9 @@
+---
+- name: Update date and time in all hists
+  hosts: all
+
+  tasks:
+
+  - name: update date and time 
+    shell: timedatectl set-timezone 'Asia/Kuala_Lumpur'
+    
