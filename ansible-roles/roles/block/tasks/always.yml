@@ -1,0 +1,14 @@
+#Block with always section- They can be added all together to do complex error handling.
+
+---
+ - name: Always do X
+   block:
+     - debug:
+         msg: 'I execute normally-always'
+     - name: i force a failure
+       command: /bin/
+     - debug:
+         msg: 'I never execute :-('
+   always:
+     - debug:
+         msg: "This always executes, :-)"

@@ -1,0 +1,17 @@
+---
+
+ - include_tasks: block.yml
+   when: inventory_hostname in test_server_ip
+  
+
+ - include_tasks: always.yml
+   when: inventory_hostname in test_server_ip
+
+
+ - include_tasks: selection.yml
+   when: inventory_hostname in test_server_ip
+
+
+ - include_tasks: handlers.yml
+   when: inventory_hostname in test_server_ip
+

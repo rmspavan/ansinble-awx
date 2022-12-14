@@ -1,0 +1,9 @@
+---
+#remove nginx container.
+- hosts:
+    - all
+  gather_facts: yes
+  tasks:
+   - include_role:
+       name: block
+     
